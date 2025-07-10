@@ -1,5 +1,5 @@
 # Import stats file for function calls
-from stats import get_word_count
+from stats import get_char_count, get_word_count
 
 # First Function reads in book.
 def get_book_text(book_file):
@@ -12,5 +12,7 @@ def main():
     book_string = get_book_text(path)
     wc = get_word_count(book_string)
     print(f"{wc} words found in the document")
+    char_count = get_char_count(book_string)
+    print(char_count)
 
 main()

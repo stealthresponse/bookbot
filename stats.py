@@ -6,4 +6,8 @@ def get_word_count(book_string):
 # Takes in book_string and returns a Dictionary. Counts appearance of all chars+symbols
 # in lowercase.
 def get_char_count(book_string):
-    return None
+    char_list = list(book_string)
+    char_dict = {}
+    for char in char_list:
+        char_dict[char] += 1
+    return char_dict
