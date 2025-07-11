@@ -13,3 +13,14 @@ def get_char_count(book_string):
         else:
             char_dict[char.lower()] += 1
     return char_dict
+
+def get_sorted_dict(char_dict):
+    char_list = []
+    for key in char_dict:
+        char_list.append({key: char_dict[key]})
+    char_list.sort(reverse=True, key=sort_on)
+    return char_list
+
+def sort_on(pair):
+    for key in pair:
+        return int(pair[key])
